@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -18,6 +18,8 @@
 		84054DE824A3F43F002B8F46 /* FlixUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 84054DE724A3F43F002B8F46 /* FlixUITests.m */; };
 		84054E3B24A5533B002B8F46 /* MoviesViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 84054E3A24A5533B002B8F46 /* MoviesViewController.m */; };
 		9EB6D01624A5CAD9002F2537 /* MovieCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 9EB6D01524A5CAD9002F2537 /* MovieCell.m */; };
+		9EB6D01924A6652F002F2537 /* DetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9EB6D01824A6652F002F2537 /* DetailViewController.m */; };
+		9EB6D01D24A697B7002F2537 /* MoviesGridViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9EB6D01C24A697B7002F2537 /* MoviesGridViewController.m */; };
 		BC4A99A7ABB922172D106FCC /* Pods_Flix.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E620F79DC7FFDC0B9C93486D /* Pods_Flix.framework */; };
 		D55F2AACE6687BEC6360617E /* Pods_Flix_FlixUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A9AD10A53E60C1EFCAE7D889 /* Pods_Flix_FlixUITests.framework */; };
 /* End PBXBuildFile section */
@@ -65,6 +67,10 @@
 		9272C8828F7E26F601B6FB97 /* Pods-Flix-FlixUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Flix-FlixUITests.release.xcconfig"; path = "Target Support Files/Pods-Flix-FlixUITests/Pods-Flix-FlixUITests.release.xcconfig"; sourceTree = "<group>"; };
 		9EB6D01424A5CAD9002F2537 /* MovieCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MovieCell.h; sourceTree = "<group>"; };
 		9EB6D01524A5CAD9002F2537 /* MovieCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MovieCell.m; sourceTree = "<group>"; };
+		9EB6D01724A6652F002F2537 /* DetailViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DetailViewController.h; sourceTree = "<group>"; };
+		9EB6D01824A6652F002F2537 /* DetailViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DetailViewController.m; sourceTree = "<group>"; };
+		9EB6D01B24A697B7002F2537 /* MoviesGridViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MoviesGridViewController.h; sourceTree = "<group>"; };
+		9EB6D01C24A697B7002F2537 /* MoviesGridViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MoviesGridViewController.m; sourceTree = "<group>"; };
 		A9AD10A53E60C1EFCAE7D889 /* Pods_Flix_FlixUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Flix_FlixUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		AC6E253962B87DA1E6C9FCF0 /* Pods-Flix.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Flix.release.xcconfig"; path = "Target Support Files/Pods-Flix/Pods-Flix.release.xcconfig"; sourceTree = "<group>"; };
 		CD184022C79EC76F525682A0 /* Pods-Flix-FlixUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Flix-FlixUITests.debug.xcconfig"; path = "Target Support Files/Pods-Flix-FlixUITests/Pods-Flix-FlixUITests.debug.xcconfig"; sourceTree = "<group>"; };
@@ -173,6 +179,10 @@
 			children = (
 				84054E3924A5533B002B8F46 /* MoviesViewController.h */,
 				84054E3A24A5533B002B8F46 /* MoviesViewController.m */,
+				9EB6D01724A6652F002F2537 /* DetailViewController.h */,
+				9EB6D01824A6652F002F2537 /* DetailViewController.m */,
+				9EB6D01B24A697B7002F2537 /* MoviesGridViewController.h */,
+				9EB6D01C24A697B7002F2537 /* MoviesGridViewController.m */,
 			);
 			path = "View Controllers";
 			sourceTree = "<group>";
@@ -203,7 +213,6 @@
 				5C37CB6F6B0DEE95A69A3547 /* Pods-FlixTests.debug.xcconfig */,
 				7AAF467F0FCE07C60F222B31 /* Pods-FlixTests.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -450,6 +459,8 @@
 				84054E3B24A5533B002B8F46 /* MoviesViewController.m in Sources */,
 				84054DD324A3F43E002B8F46 /* main.m in Sources */,
 				84054DC524A3F435002B8F46 /* SceneDelegate.m in Sources */,
+				9EB6D01924A6652F002F2537 /* DetailViewController.m in Sources */,
+				9EB6D01D24A697B7002F2537 /* MoviesGridViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
