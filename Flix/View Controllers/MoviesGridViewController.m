@@ -14,6 +14,7 @@
 
 @property (strong, nonatomic) NSArray *movies;
 @property (weak, nonatomic) IBOutlet UICollectionView *collectionView;
+@property (weak, nonatomic) IBOutlet UIActivityIndicatorView *loadingActivity;
 
 @end
 
@@ -30,6 +31,7 @@
     
     UICollectionViewFlowLayout *layout =(UICollectionViewFlowLayout*) self.collectionView.collectionViewLayout;
     
+    
     CGFloat postersPerLine = 3;
     CGFloat itemWidth = self.collectionView.frame.size.width / postersPerLine;
     CGFloat itemHeight = itemWidth * 1.5;
@@ -38,7 +40,9 @@
 
 
 - (void)fetchMovies {
-    NSURL *url = [NSURL URLWithString:@"https://api.themoviedb.org/3/movie/now_playing?api_key=a07e22bc18f5cb106bfe4cc1f83ad8ed"];
+    //Begins Loading animation
+    [self.loadingActivity startAnimating];
+    NSURL *url = [NSURL URLWithString:@"https://api.themoviedb.org/3/movie/271110/similar?api_key=a07e22bc18f5cb106bfe4cc1f83ad8ed&language=en-US&page=1"];
     NSURLRequest *request = [NSURLRequest requestWithURL:url cachePolicy:NSURLRequestReloadIgnoringLocalCacheData timeoutInterval:10.0];
     NSURLSession *session = [NSURLSession sessionWithConfiguration:[NSURLSessionConfiguration defaultSessionConfiguration] delegate:nil delegateQueue:[NSOperationQueue mainQueue]];
     NSURLSessionDataTask *task = [session dataTaskWithRequest:request completionHandler:^(NSData *data, NSURLResponse *response, NSError *error) {
@@ -47,7 +51,10 @@
         }
         else {
             NSDictionary *dataDictionary = [NSJSONSerialization JSONObjectWithData:data options:NSJSONReadingMutableContainers error:nil];
-
+            
+            //Ends Loading animation
+            [self.loadingActivity stopAnimating];
+            
             self.movies = dataDictionary[@"results"];
             [self.collectionView reloadData];
             }

@@ -133,6 +133,11 @@
                                     </collectionViewCell>
                                 </cells>
                             </collectionView>
+                            <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" hidesWhenStopped="YES" style="whiteLarge" translatesAutoresizingMaskIntoConstraints="NO" id="S2W-Ha-16z">
+                                <rect key="frame" x="189" y="430" width="37" height="37"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="color" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </activityIndicatorView>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <viewLayoutGuide key="safeArea" id="kCE-C1-r5d"/>
@@ -140,6 +145,7 @@
                     <navigationItem key="navigationItem" id="4dc-bH-FCD"/>
                     <connections>
                         <outlet property="collectionView" destination="kLm-Rq-30d" id="iVZ-wN-MHb"/>
+                        <outlet property="loadingActivity" destination="S2W-Ha-16z" id="5Pt-zU-hcU"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="SID-2C-eEd" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
