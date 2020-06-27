@@ -30,11 +30,6 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view.
     
-    UIAlertController *alert = [UIAlertController alertControllerWithTitle:@"Cannot Get Movies"
-           message:@"Unable to establish Internet Connection"
-    preferredStyle:(UIAlertControllerStyleAlert)];
-   
-    
     self.tableView.dataSource = self;
     self.tableView.delegate = self;
     
